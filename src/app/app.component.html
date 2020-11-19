@@ -1,0 +1,11 @@
+
+<app-navbar class="mt-5" (showComponent)="changeView($event)"></app-navbar>
+<div [ngSwitch]="viewShown" class="d-flex justify-content-center align-items-center main">
+  <app-main *ngSwitchCase="main"></app-main>
+  <app-plot *ngSwitchCase="plot"></app-plot>
+  <app-manage *ngSwitchCase="manage"></app-manage>
+  <div *ngSwitchDefault>Select a view to show</div>
+</div>
+
+
+<router-outlet></router-outlet>

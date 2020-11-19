@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center mb-2">
+    <input id="date" type="date" [(ngModel)]="date"/>
+</div>
+<div class="d-flex justify-content-around flex-wrap mb-2">
+    <div class="mr-3">
+        <label class="mr-2" for="hour">Hour</label>
+        <input name="hour" id="hour" type="number" [(ngModel)]="hour"/>
+    </div>
+    <div class="mr-3">
+        <label class="mr-2" for="minute">Minute</label>
+        <input name="minute" id="minute" type="number" [(ngModel)]="minute"/>
+    </div>
+    <div>
+        <button (click)="addTime()">Add time</button>
+    </div>
+</div>
+<div class="d-flex flex-column align-items-center">
+    <div *ngFor="let entry of sleepService.entries.reverse()">
+        <app-entry [entry]="entry" (deleteEntry)="deleteEntryFromService(entry)"></app-entry>
+    </div>
+</div>

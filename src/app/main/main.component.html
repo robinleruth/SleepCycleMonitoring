@@ -1,0 +1,10 @@
+<div class="d-flex flex-column justify-content-center align-items-center">
+    <div>
+        <button (click)="addEntry()">Add entry</button>
+    </div>
+    <div *ngIf="entryAdded" class="d-flex justify-content-center align-items-center successful-addition">
+        <div style="background: #37b957;">
+            Added successfully !
+        </div>
+    </div>
+</div>

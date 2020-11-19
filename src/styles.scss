@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background: #131419;
+    color: #c7c7c7;
+}
+
+button {
+    border-radius: 50px;
+    background: #131419;
+    box-shadow:  20px 20px 60px #0a0b0d, 
+                 -20px -20px 60px #1c1d25;
+}
+
+button:hover {
+    border-radius: 50px;
+    background: #131419;
+    box-shadow: inset 20px 20px 60px #0a0b0d, 
+                inset -20px -20px 60px #1c1d25;
+}
